@@ -34,9 +34,12 @@ const [error, setError] = useState(null);
     }
     return (
         <form>
+            <label>
             <input type="file"
             onChange={changeHandler}
             />
+            <span>+</span>
+            </label>
             <div className='output'>
               {/* if error comes then only the below element is shown */}
                 {error && <div className='error'>{error}</div>}
