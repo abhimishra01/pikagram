@@ -45,11 +45,24 @@ body{
   display:grid;
   grid-template-columns: repeat(3,1fr);
   grid-gap:10px;
-
+  align-items: center;
+  text-align:center;
+}
+.image-wrap{
+  overflow:hidden;
+  /* height:0; */
+  opacity:0.9;
+  position:relative;
+  padding:50% 0;
 }
 .img{
-  height:200px;
-  width:200px;
+  height:100%;
+ width:100%;
+
+
+  /* position:absolute;
+  top:0;
+  left:0; */
 }
 
 /* modal styles */
