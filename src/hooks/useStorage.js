@@ -34,7 +34,7 @@ const useStorage = (file)=> {
         const storageRef = projectStorage.ref(file.name); // create a reference to the file inside default firebase storage
         
         // creating a refernce for interacting with firestore database
-        const databaseRef = fireStore.collection('ímages');
+        const databaseRef = fireStore.collection('images');
 
         // putting the file using that reference
         /**
