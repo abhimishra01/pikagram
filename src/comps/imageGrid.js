@@ -11,7 +11,7 @@ const ImageGrid = () =>{
            {doc && doc.map((docs) => 
                (<div className='image-wrap' 
                key={docs.id}>
-                   <img src={docs.url} alt='uploaded pic'></img>
+                   <img class='img' src={docs.url} alt='uploaded pic'></img>
                </div>
            ))}
 
