@@ -1,8 +1,7 @@
-import React,{useState} from 'react';
+import React from 'react';
 
 const Modal = () =>{
-    const [selectedImg, setSelectedImg] = useState(null);
-    return (
+   return (
         <div className='backdrop'>
             <img src="" alt="enlarged"/>
         </div>
