@@ -17,7 +17,11 @@ const ImageGrid = ({setSelectedImg}) =>{
                 onClick={() =>setSelectedImg(docs.url)}
                  className='image-wrap' 
                key={docs.id}>
-                   <img class='img' src={docs.url} alt='uploaded pic'></img>
+                   <motion.img class='img' src={docs.url} alt='uploaded pic'
+                   initial={{opacity:0}}
+                   animate={{opacity:1}}
+                   transitio={{delay:1}}
+                   />
                </motion.div>
            ))}
 
