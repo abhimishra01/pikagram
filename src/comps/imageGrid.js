@@ -4,11 +4,16 @@ import useFirestore from '../hooks/useFirestore';
 
 const ImageGrid = () =>{
 
-    const {docs } = useFirestore('images');
-    
+    const { doc } = useFirestore('images');
+    // console.log(doc);
     return (
         <div className='img-grid'>
-            images
+           {doc && doc.map((docs) => 
+               (<div className='image-wrap' 
+               key={docs.id}>
+                   <img src={docs.url} alt='uploaded pic'></img>
+               </div>
+           ))}
 
         </div>
     );
