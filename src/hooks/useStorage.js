@@ -1,7 +1,6 @@
 // React Hooks :- a way to create small reusable components in order to use them wherever needed
 import { useState, useEffect } from 'react';
 import { projectStorage } from "../firebaseConfig";
-
 const useStorage = (file)=> {
      // file param comes from our file state component
 
