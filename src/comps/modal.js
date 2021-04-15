@@ -3,7 +3,7 @@ import React from 'react';
 const Modal = ({selectedImg}) =>{
    return (
         <div className='backdrop'>
-            <img src="" alt="enlarged"/>
+            <img src="selectedImg" alt="enlarged"/>
         </div>
     )
 }
