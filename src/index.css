@@ -65,14 +65,14 @@ label:hover{
 
 /* progress bar styles */
 .progress-bar{
-  height: 10px;
+  height: 5px;
   background: var(--primary);
-  margin-bottom:20px auto;
+  margin:20px;
 }
 
 /* image grid styles */
 .img-grid{
-  margin:30px auto;
+  margin:65px auto;
   display:grid;
   grid-template-columns: repeat(3,1fr);
   grid-gap:10px;
