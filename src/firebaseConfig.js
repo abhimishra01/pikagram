@@ -21,8 +21,11 @@ const projectStorage = firebase.storage();
 // initializing the firestore
 const fireStore = firebase.firestore();
 
+// firebase server timestamp
+const timestamp = firebase.firestore().FieldValue.serverTimestamp;
+
 
 // exporting the above to use in diff react components
-export {projectStorage, fireStore}
+export {projectStorage, fireStore, timestamp}
 
 // after this we need to initialize / configure the two services on our firebase dashboard ..
