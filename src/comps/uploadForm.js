@@ -23,6 +23,8 @@ const [error, setError] = useState(null);
         // truthy when selected will actually have a file and matches into one of allowed fiel types
         if (selected && allowedImageTypes.includes(selected.type)){
             setFile(selected);
+            // setting error to empty string 
+            setError("");
         } 
         else{ 
             // giving error update if invalid file type
