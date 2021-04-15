@@ -1,6 +1,6 @@
 // React Hooks :- a way to create small reusable components in order to use them wherever needed
 import { useState, useEffect } from 'react';
-import { projectStorage } from "../firebaseConfig";
+import { projectStorage, fireStore, timestamp } from "../firebaseConfig";
 const useStorage = (file)=> {
      // file param comes from our file state component
 
@@ -33,6 +33,9 @@ const useStorage = (file)=> {
         //    references
         const storageRef = projectStorage.ref(file.name); // create a reference to the file inside default firebase storage
         
+        // creating a refernce for interacting with firestore database
+        const databaseRef = fireStore.collection('ímages');
+
         // putting the file using that reference
         /**
          * storage.Ref.put(file) is a method to upload file -> asynchronous function
@@ -57,7 +60,8 @@ const useStorage = (file)=> {
         ,async () => {
             // fourth argument , a function , fires when upload is completed
             const url = await storageRef.getDownloadURL();
-
+            const createdAt = timestamp();
+            databaseRef.add({url,createdAt})
             setURL(url); 
             // both url vars are inside diff scopes in our code so none does overrides anyone
         }
