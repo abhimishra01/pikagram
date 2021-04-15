@@ -48,7 +48,7 @@ const useStorage = (file)=> {
             // now we will figure out progress of  the upload 
             // snap.bytesTransferred => property of snapshot tells us no of bytes transferred at that very moment
             // snap.totalBytes => property to tell total size of file  
-            let percentage = (snap.bytesTransferred / snap.TotalBytes) * 100;
+            let percentage = (snapshot.bytesTransferred / snapshot.TotalBytes) * 100;
             // upload percentage
             setProgress(percentage);
 
@@ -59,7 +59,7 @@ const useStorage = (file)=> {
         ,async () => {
             // fourth argument , a function , fires when upload is completed
             const url = await storageRef.getDownloadURL();
-            
+
             setURL(url); 
             // both url vars are inside diff scopes in our code so none does overrides anyone
         }
