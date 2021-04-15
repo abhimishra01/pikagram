@@ -1,5 +1,5 @@
 
-import * as firebase from 'firebase/app';  // importing everything from firebase 
+import  firebase from 'firebase/app';  // importing everything from firebase 
 import 'firebase/storage'; // also importing storage SDK will be using to store our images
 import 'firebase/firestore'; // importing firestore to manage real time db stuffs    
 
