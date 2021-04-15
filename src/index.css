@@ -40,6 +40,16 @@ body{
 }
 
 /* image grid styles */
+.img-grid{
+  margin:20px auto;
+  display:grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap:10px;
 
+}
+.img{
+  height:200px;
+  width:200px;
+}
 
 /* modal styles */
