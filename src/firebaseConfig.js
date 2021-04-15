@@ -22,7 +22,7 @@ const projectStorage = firebase.storage();
 const fireStore = firebase.firestore();
 
 // firebase server timestamp
-const timestamp = firebase.firestore().FieldValue.serverTimestamp;
+const timestamp = firebase.firestore.FieldValue.serverTimestamp;
 
 
 // exporting the above to use in diff react components
