@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import ProgressBar from './ProgressBar';
 const UploadForm =()=>{
 
 // store the file in local piece of state
@@ -45,7 +45,9 @@ const [error, setError] = useState(null);
                 {error && <div className='error'>{error}</div>}
 
                 {/* output of file type shown after user uploads the valid file */}
+                {/* if this is true && <then show this> */}
                 {file && <div>{file.name}</div>}
+                {file && <ProgressBar file={file} setFile={setFile} />}
             </div>
         </form>
     )
