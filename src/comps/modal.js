@@ -3,7 +3,10 @@ import React from 'react';
 const Modal = ({selectedImg,setSelectedImg}) =>{
 
     const closeBackdrop = (evt)=>{
-        setSelectedImg(null);
+    
+        // checking if the clicked is inside the image or outside the image -> we only need to close when outside the image is clicked
+        if(evt.target.classList.contains('backdrop')){
+        setSelectedImg(null);}
     }
 
     return (
