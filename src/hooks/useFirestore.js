@@ -21,5 +21,7 @@ const useFirestore = (collectionName)=> {
         })
         return ()=> unSubscribe(); // cleanup function
     },[collectionName]);
-    return {docs};
+    return {doc};
 }
+
+export default useFirestore;
