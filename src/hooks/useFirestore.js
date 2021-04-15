@@ -3,8 +3,6 @@ import {fireStore} from '../firebaseConfig';
 
 const useFirestore = (collectionName)=> {
     const [doc, setDoc] = useState([]);   
- 
-    
     useEffect(()=>{
         
         // detailed explaination in useStorage.js available
@@ -15,12 +13,13 @@ const useFirestore = (collectionName)=> {
             let documents = [];
 
             snapshot.forEach(doc=>{
-                document.push({...doc.data(),id:doc.id});
+                documents.push({...doc.data(),id: doc.id});
             });
             setDoc(documents);           
         })
         return ()=> unSubscribe(); // cleanup function
     },[collectionName]);
+    // console.log(doc);
     return {doc};
 }
 
