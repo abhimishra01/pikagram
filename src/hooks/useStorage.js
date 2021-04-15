@@ -47,10 +47,9 @@ const useStorage = (file)=> {
             // now we will figure out progress of  the upload 
             // snap.bytesTransferred => property of snapshot tells us no of bytes transferred at that very moment
             // snap.totalBytes => property to tell total size of file  
-            let percentage = (snapshot.bytesTransferred / snapshot.TotalBytes) * 100;
+            let percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
             // upload percentage
             setProgress(percentage);
-
             
         }, (err)=>{
             setError(err);
