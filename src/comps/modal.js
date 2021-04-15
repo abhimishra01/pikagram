@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {motion} from 'framer-motion';
 const Modal = ({selectedImg,setSelectedImg}) =>{
 
     const closeBackdrop = (evt)=>{
@@ -10,9 +10,16 @@ const Modal = ({selectedImg,setSelectedImg}) =>{
     }
 
     return (
-        <div className='backdrop' onClick={closeBackdrop}>
-            <img src={selectedImg} alt="enlarged"/>
-        </div>
+        <motion.div className='backdrop'
+        initial={{opacity:0}}
+        animate={{opacity:1}}
+        onClick={closeBackdrop}>
+            <motion.img
+            // this property takes the img off the screen on y axis and then animates accordingly
+            initial={{y:"-100vh"}}
+            animate={{y:0}}
+            src={selectedImg} alt="enlarged"/>
+        </motion.div>
     )
 }
 

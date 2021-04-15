@@ -67,12 +67,12 @@ label:hover{
 .progress-bar{
   height: 5px;
   background: var(--primary);
-  margin-top:20px;
+  margin:20px;
 }
 
 /* image grid styles */
 .img-grid{
-  margin:0px auto;
+  margin:65px auto;
   display:grid;
   grid-template-columns: repeat(3,1fr);
   grid-gap:10px;
@@ -89,8 +89,6 @@ label:hover{
 .img{
   height:100%;
  width:100%;
-
-
   /* position:absolute;
   top:0;
   left:0; */
