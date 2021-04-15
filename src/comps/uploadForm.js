@@ -38,7 +38,11 @@ const [error, setError] = useState(null);
             onChange={changeHandler}
             />
             <div className='output'>
+              {/* if error comes then only the below element is shown */}
                 {error && <div className='error'>{error}</div>}
+
+                {/* output of file type shown after user uploads the valid file */}
+                {file && <div>{file.name}</div>}
             </div>
         </form>
     )
