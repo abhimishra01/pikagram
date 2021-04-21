@@ -81,9 +81,8 @@ label:hover{
 /* image grid styles */
 .img-grid{
   margin:65px auto;
-  display:grid;
-  grid-template-columns: repeat(3,1fr);
-  grid-gap:10px;
+  display:flex;
+  flex-direction: column;
   align-items: center;
   text-align:center;
 }
@@ -97,9 +96,7 @@ label:hover{
 .img{
   height:100%;
  width:100%;
-  /* position:absolute;
-  top:0;
-  left:0; */
+ margin: 30px auto;
 }
 
 /* modal styles */
