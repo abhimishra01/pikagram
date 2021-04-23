@@ -6,7 +6,6 @@ import {useState} from 'react';
 
 const CmtModal = ({comments,imgId,setSelectedCmtBtn}) =>{
     const databaseRef = fireStore.collection('images');
-    const userData = databaseRef.doc(imgId).get();
     const [comment, setComment] = useState("");
     console.log(comments);
     const closeBackdrop = (evt)=>{
@@ -38,7 +37,7 @@ const CmtModal = ({comments,imgId,setSelectedCmtBtn}) =>{
       placeholder="comment"></textarea>
         <button>Comment</button>
        </motion.form>
-        <motion.div>
+        {/* <motion.div>
                  {comments.map(comment =>{
                    console.log(comment);
                    //  return (
@@ -49,7 +48,7 @@ const CmtModal = ({comments,imgId,setSelectedCmtBtn}) =>{
                     //      </div>
                     //  )
                  })}
-        </motion.div>
+        </motion.div> */}
         </motion.div>
     )
 }
