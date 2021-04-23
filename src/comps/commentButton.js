@@ -1,11 +1,12 @@
 import React from 'react';
 import Emoji from 'a11y-react-emoji';
 
-const CommentsBtn = ({imgid,setSelectedCmtBtn,setimgId}) => {
+const CommentsBtn = ({setComments,comments,imgid,setSelectedCmtBtn,setimgId}) => {
    
     const updateStates = ()=>{
         setSelectedCmtBtn(true);
         setimgId(imgid);
+        setComments(comments);
     }
 
     return ( 
