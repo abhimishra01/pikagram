@@ -37,6 +37,8 @@ const ImageGrid = ({setSelectedImg,setSelectedCmtBtn,setimgId}) =>{
                  likes={docs.likes}
                  />
                  <CommentsBtn
+                 setComments={setComments}
+                 comments={docs.comments}
                  imgid={docs.id}
                  setSelectedCmtBtn={setSelectedCmtBtn}
                  setimgId={setimgId}
