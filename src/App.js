@@ -3,21 +3,27 @@ import Title from './comps/Title';
 import UploadForm from './comps/uploadForm';
 import ImageGrid from './comps/imageGrid'
 import Modal from './comps/modal';
+import CmtModal from './comps/commentsModal';
+
 function App() {
   const [selectedImg, setSelectedImg] = useState(null);
   const [selectedCmtBtn, setSelectedCmtBtn] = useState(null);
 
+  const [imgId, setimgId] = useState(0)
 
   return (
     <div className="App">
       <Title/>
       <UploadForm/>
-      <ImageGrid setSelectedImg={setSelectedImg}setSelectedCmtBtn={setSelectedCmtBtn} />
+      <ImageGrid 
+      setimgId={setimgId}
+      setSelectedImg={setSelectedImg}setSelectedCmtBtn={setSelectedCmtBtn} />
       {selectedImg && <Modal
       setSelectedImg={setSelectedImg}
       selectedImg={selectedImg}/>}
+
       {selectedCmtBtn && <CmtModal
-      selectedCmtBtn={selectedCmtBtn}
+      imgId={imgId}
       setSelectedCmtBtn={setSelectedCmtBtn}/>}
     </div>
   );
