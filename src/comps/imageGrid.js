@@ -3,9 +3,9 @@ import useFirestore from '../hooks/useFirestore';
 import LikeButton from './likeBtn';
 import DeleteBtn from './deleteButton';
 import {motion} from 'framer-motion';
+import CommentsBtn from './commentButton';
 
-
-const ImageGrid = ({setSelectedImg,selectedCmtBtn, setSelectedCmtBtn}) =>{
+const ImageGrid = ({setSelectedImg,setSelectedCmtBtn,setimgId}) =>{
     
     // const [likes, setLikes] = useState(0);
     // const handleLikeEvt = (id) =>{
@@ -37,7 +37,9 @@ const ImageGrid = ({setSelectedImg,selectedCmtBtn, setSelectedCmtBtn}) =>{
                  likes={docs.likes}
                  />
                  <CommentsBtn
-                    onClick={() =>setSelectedCmtBtn(true)}
+                 imgid={docs.id}
+                 setSelectedCmtBtn={setSelectedCmtBtn}
+                 setimgId={setimgId}
                  />
                  <DeleteBtn
                  id={docs.id}
