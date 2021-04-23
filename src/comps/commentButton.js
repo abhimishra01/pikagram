@@ -1,14 +1,18 @@
 import React from 'react';
 import Emoji from 'a11y-react-emoji';
 
-const CommentsBtn = ({id}) => {
+const CommentsBtn = ({imgid,setSelectedCmtBtn,setimgId}) => {
    
+    const updateStates = ()=>{
+        setSelectedCmtBtn(true);
+        setimgId(imgid);
+    }
+
     return ( 
             <button
+            onClick={updateStates}
             className="like-btn"
-            onClick={handleClickEvent}
-            > <Emoji symbol="💭" label="comment" />
-           {likes}</button>
+            > <Emoji symbol="💭" label="comment" /></button>
        
      );
 }
