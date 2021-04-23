@@ -31,6 +31,7 @@ const useStorage = (file)=> {
     useEffect(() => {
         
         const likes = 0
+        const comments = [];
         //    references
         const storageRef = projectStorage.ref(file.name); // create a reference to the file inside default firebase storage
         
@@ -61,7 +62,7 @@ const useStorage = (file)=> {
             // fourth argument , a function , fires when upload is completed
             const url = await storageRef.getDownloadURL();
             const createdAt = timestamp();
-            databaseRef.add({url,createdAt,likes})
+            databaseRef.add({url,createdAt,likes,comments})
             setURL(url); 
             // both url vars are inside diff scopes in our code so none does overrides anyone
         }
