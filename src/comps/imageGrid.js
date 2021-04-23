@@ -5,7 +5,7 @@ import DeleteBtn from './deleteButton';
 import {motion} from 'framer-motion';
 import CommentsBtn from './commentButton';
 
-const ImageGrid = ({setSelectedImg,setSelectedCmtBtn,setimgId}) =>{
+const ImageGrid = ({setComments,setSelectedImg,setSelectedCmtBtn,setimgId}) =>{
     
     // const [likes, setLikes] = useState(0);
     // const handleLikeEvt = (id) =>{
