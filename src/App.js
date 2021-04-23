@@ -5,15 +5,20 @@ import ImageGrid from './comps/imageGrid'
 import Modal from './comps/modal';
 function App() {
   const [selectedImg, setSelectedImg] = useState(null);
+  const [selectedCmtBtn, setSelectedCmtBtn] = useState(null);
+
 
   return (
     <div className="App">
       <Title/>
       <UploadForm/>
-      <ImageGrid setSelectedImg={setSelectedImg} />
+      <ImageGrid setSelectedImg={setSelectedImg}setSelectedCmtBtn={setSelectedCmtBtn} />
       {selectedImg && <Modal
       setSelectedImg={setSelectedImg}
       selectedImg={selectedImg}/>}
+      {selectedCmtBtn && <CmtModal
+      selectedCmtBtn={selectedCmtBtn}
+      setSelectedCmtBtn={setSelectedCmtBtn}/>}
     </div>
   );
 }
