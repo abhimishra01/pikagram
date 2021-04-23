@@ -1,22 +1,21 @@
 import React from 'react';
-import {useState} from 'react';
 import Emoji from 'a11y-react-emoji';
-import useLike from '../hooks/useLike';
+import {fireStore} from "../firebaseConfig";
 
-const LikeButton = (id) => {
-    const {like} = useLike(id);
-    const [likes, setLikes] = useState(like)
+const LikeButton = ({id,likes}) => {
+    const databaseRef = fireStore.collection('images');
     const likeHandleEvent = ()=>{
-        setLikes(likes++);
+        databaseRef.doc(id).update({
+            likes: likes+1
+        });  
     }
     return ( 
-        <div className="like-btn">
             <button
+            className="like-btn"
             onClick={likeHandleEvent}
             > <Emoji symbol="💕" label="love" />
-            {like}
-            </button>
-        </div>
+           {likes}</button>
+       
      );
 }
  
