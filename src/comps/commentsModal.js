@@ -4,11 +4,11 @@ import {fireStore} from "../firebaseConfig";
 import  firebase from 'firebase/app'; 
 import {useState} from 'react';
 
-const CmtModal = ({imgId,setSelectedCmtBtn}) =>{
+const CmtModal = ({comments,imgId,setSelectedCmtBtn}) =>{
     const databaseRef = fireStore.collection('images');
     const userData = databaseRef.doc(imgId).get();
     const [comment, setComment] = useState("");
-    console.log(userData);
+    console.log(comments);
     const closeBackdrop = (evt)=>{
         if(evt.target.classList.contains('backdrop')){
             setSelectedCmtBtn(null);}
@@ -39,7 +39,16 @@ const CmtModal = ({imgId,setSelectedCmtBtn}) =>{
         <button>Comment</button>
        </motion.form>
         <motion.div>
-                 
+                 {comments.map(comment =>{
+                   console.log(comment);
+                   //  return (
+                    //      <div 
+                         
+                    //      className="comments">
+                             
+                    //      </div>
+                    //  )
+                 })}
         </motion.div>
         </motion.div>
     )
