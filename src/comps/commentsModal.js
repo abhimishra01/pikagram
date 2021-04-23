@@ -6,22 +6,20 @@ import {useState} from 'react';
 
 const CmtModal = ({imgId,setSelectedCmtBtn}) =>{
     const databaseRef = fireStore.collection('images');
+    const userData = databaseRef.doc(imgId).get();
     const [comment, setComment] = useState("");
-
+    console.log(userData);
     const closeBackdrop = (evt)=>{
-    
-        // checking if the clicked is inside the image or outside the image -> we only need to close when outside the image is clicked
         if(evt.target.classList.contains('backdrop')){
             setSelectedCmtBtn(null);}
     }
-
     const handleSubmit = (evt)=>{
         console.log(imgId);
         evt.preventDefault();
         databaseRef.doc(imgId).update({
             commments: firebase.firestore.FieldValue.arrayUnion(comment)
         });  
-        closeBackdrop();
+        setComment("");
     }
 
     return (
@@ -39,7 +37,10 @@ const CmtModal = ({imgId,setSelectedCmtBtn}) =>{
         name="CommentBox" id="" cols="60" rows="10"
       placeholder="comment"></textarea>
         <button>Comment</button>
-        </motion.form>
+       </motion.form>
+        <motion.div>
+                 
+        </motion.div>
         </motion.div>
     )
 }
