@@ -8,7 +8,7 @@ import CmtModal from './comps/commentsModal';
 function App() {
   const [selectedImg, setSelectedImg] = useState(null);
   const [selectedCmtBtn, setSelectedCmtBtn] = useState(null);
-
+  const [comments, setComments] = useState(null);
   const [imgId, setimgId] = useState(0)
 
   return (
@@ -16,6 +16,7 @@ function App() {
       <Title/>
       <UploadForm/>
       <ImageGrid 
+      setComments={setComments}
       setimgId={setimgId}
       setSelectedImg={setSelectedImg}setSelectedCmtBtn={setSelectedCmtBtn} />
       {selectedImg && <Modal
@@ -23,6 +24,7 @@ function App() {
       selectedImg={selectedImg}/>}
 
       {selectedCmtBtn && <CmtModal
+      comments={comments}
       imgId={imgId}
       setSelectedCmtBtn={setSelectedCmtBtn}/>}
     </div>
