@@ -33,9 +33,8 @@ const ImageGrid = ({setSelectedImg}) =>{
            <div className="btns">
                  <LikeButton
                  id={docs.id}
-                //  onClick={() => handleLikeEvt(docs.id)}
+                 likes={docs.likes}
                  />
-                 <h1>like</h1>
              </div>
                </div>
            ))}
