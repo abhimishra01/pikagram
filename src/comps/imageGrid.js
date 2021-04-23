@@ -1,6 +1,7 @@
 import React from 'react';
 import useFirestore from '../hooks/useFirestore';
 import LikeButton from './likeBtn';
+import DeleteBtn from './deleteButton';
 import {motion} from 'framer-motion';
 
 
@@ -34,6 +35,9 @@ const ImageGrid = ({setSelectedImg}) =>{
                  <LikeButton
                  id={docs.id}
                  likes={docs.likes}
+                 />
+                 <DeleteBtn
+                 id={docs.id}
                  />
              </div>
                </div>
