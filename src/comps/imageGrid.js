@@ -1,19 +1,15 @@
 import React from 'react';
 import useFirestore from '../hooks/useFirestore';
-import {useState} from 'react';
 import LikeButton from './likeBtn';
 import {motion} from 'framer-motion';
-import useLike from '../hooks/useLike';
 
 
 const ImageGrid = ({setSelectedImg}) =>{
     
-    const [likes, setLikes] = useState(0);
-    const handleLikeEvt = (id) =>{
-        const {like} = useLike(id);
-        console.log(like);
-        setLikes(like);
-         }
+    // const [likes, setLikes] = useState(0);
+    // const handleLikeEvt = (id) =>{
+    
+    //      }
         const { doc } = useFirestore('images');
         // console.log(doc);
         return (
@@ -36,7 +32,8 @@ const ImageGrid = ({setSelectedImg}) =>{
                </motion.div>
            <div className="btns">
                  <LikeButton
-                 onClick={() => handleLikeEvt(docs.id)}
+                 id={docs.id}
+                //  onClick={() => handleLikeEvt(docs.id)}
                  />
                  <h1>like</h1>
              </div>
