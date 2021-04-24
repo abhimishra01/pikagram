@@ -6,18 +6,18 @@ import {useState} from 'react';
 
 const CmtModal = ({comments,imgId,setSelectedCmtBtn}) =>{
     const databaseRef = fireStore.collection('images');
-    const [comment, setComment] = useState("");
-    console.log(comments);
+    const [comment, setComment] = useState(null);
     const closeBackdrop = (evt)=>{
         if(evt.target.classList.contains('backdrop')){
             setSelectedCmtBtn(null);}
     }
     const handleSubmit = (evt)=>{
-        console.log(imgId);
         evt.preventDefault();
-        databaseRef.doc(imgId).update({
-            commments: firebase.firestore.FieldValue.arrayUnion(comment)
-        });  
+        if (comment){
+            databaseRef.doc(imgId).update({
+                comments: firebase.firestore.FieldValue.arrayUnion(comment)
+            });      
+        }
         setComment("");
     }
 
@@ -29,7 +29,7 @@ const CmtModal = ({comments,imgId,setSelectedCmtBtn}) =>{
             <motion.form
         className="comments-form"
         onSubmit={handleSubmit}
-            initial={{y:"-100vh"}}
+            initial={{y:"-500vh"}}
             animate={{y:0}}>
         <textarea
          onChange={(event)=>setComment(event.target.value)}
@@ -37,18 +37,22 @@ const CmtModal = ({comments,imgId,setSelectedCmtBtn}) =>{
       placeholder="comment"></textarea>
         <button>Comment</button>
        </motion.form>
-        {/* <motion.div>
+         <motion.div className="cmnts-section">
+                 <ul>
                  {comments.map(comment =>{
-                   console.log(comment);
-                   //  return (
-                    //      <div 
-                         
-                    //      className="comments">
-                             
-                    //      </div>
-                    //  )
+                    return (
+                         <li
+                         id={imgId} 
+                         className="comments">
+                             {comment}
+                         </li>
+                     )
                  })}
-        </motion.div> */}
+                 <li
+                 style={{color:"yellow"}}
+                 >Note: This feature is currently work in progress, please reload comment box in order to see new comments</li>
+                 </ul>
+        </motion.div> 
         </motion.div>
     )
 }
