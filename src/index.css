@@ -95,9 +95,9 @@ label:hover{
   /* padding:50% 0; */
 }
 .img{
-  height:100vh;
+  height:80vh;
  width:100vh;
- margin: 30px auto;
+ margin: 20px auto;
 }
 
 /* modal styles */
@@ -150,6 +150,15 @@ label:hover{
 .user, .title h1 {
   margin:10px 0;
 }
+
+.user{
+  font-family:cursive;
+}
+
+.user strong{
+  font-family: "Noto Serif";
+  color:var(--primary);
+}
 .logoutbtn{
   background-color:var(--primary);
   border: 1px solid #333;
@@ -162,8 +171,15 @@ label:hover{
 
 .logoutbtn Button{
   font-size:14px;
+  font-family: "Noto Serif";
   color:white;
 }
+
+
+.logoutbtn Button:hover{
+  color:white;
+}
+
 
 @media screen and (max-width:638px){
   
@@ -209,4 +225,12 @@ label:hover{
   width:60vw;
 }
  /* margin: 20px auto; */
+}
+
+
+.crudBtns{
+ margin-bottom: 50px;
+  display:flex;
+  flex-flow:row no-wrap;
+  justify-content: space-evenly;
 }
