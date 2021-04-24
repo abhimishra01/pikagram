@@ -4,7 +4,6 @@ import UploadForm from './uploadForm';
 import ImageGrid from './imageGrid'
 import Modal from './modal';
 import CmtModal from './commentsModal';
-import LogoutBtn from './logoutBtn';
 
 const Dashboard = ()=> {
   const [selectedImg, setSelectedImg] = useState(null);
@@ -14,10 +13,7 @@ const Dashboard = ()=> {
 
   return (
     <div>
-      <div className="upperCont">
       <Title/>
-      <LogoutBtn/>
-      </div>
       <UploadForm/>
       <ImageGrid 
       setComments={setComments}
