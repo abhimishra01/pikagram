@@ -1,6 +1,6 @@
 import React from 'react';
-import Emoji from 'a11y-react-emoji';
 import {fireStore} from "../firebaseConfig";
+import FavoriteOutlinedIcon from '@material-ui/icons/FavoriteOutlined';
 
 const LikeButton = ({id,likes}) => {
     const databaseRef = fireStore.collection('images');
@@ -13,7 +13,7 @@ const LikeButton = ({id,likes}) => {
             <button
             className="like-btn"
             onClick={likeHandleEvent}
-            > <Emoji symbol="💕" label="love" />
+            > <FavoriteOutlinedIcon id="like"/>
            {likes}</button>
        
      );
