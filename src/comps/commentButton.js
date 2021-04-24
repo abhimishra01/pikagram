@@ -13,7 +13,7 @@ const CommentsBtn = ({setComments,comments,imgid,setSelectedCmtBtn,setimgId}) =>
             <button
             onClick={updateStates}
             className="like-btn"
-            > <FaComments/></button>
+            > <FaComments id="cmt"/></button>
        
      );
 }
