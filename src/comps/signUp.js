@@ -1,5 +1,5 @@
-import React, {useRef} from "react";
-import {Card, Form, Button } from 'react-bootstrap';
+import React, {useState,useRef} from "react";
+import {Card, Form, Button, Alert } from 'react-bootstrap';
 import {useAuth} from '../context/AuthContext';
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -8,22 +8,34 @@ const SignUpForm = () => {
     
     const emailRef = useRef(null);
     const passwordRef = useRef(null);
+    const [isLoading, setLoading] = useState(false);
     const passwordConfirmRef = useRef(null);
-    const {signUp} = useAuth();
-    
+    const {signup, currentUser} = useAuth();
+    const [error,setError] = useState(null);
 
-    const handleSubmit =(evt)=>{
-        e.preventDefault();
-        signUp(emailRef.current.value, passwordRef.current.value);
+    async function handleSubmit(evt){
+        evt.preventDefault();
+        if(passwordRef.current.value !== passwordConfirmRef.current.value){
+            return setError("Passwords Do Not Match");
+        }
+        try{
+            setLoading(true);
+            await signup(emailRef.current.value, passwordRef.current.value);
+        }
+        catch{
+            setError("Failed to create an account!")
+        }
+        setLoading(false);
     }
-
+    
     return ( <div className="signUpform">
         <Card className="SignUpCard">
           <Card.Body className="mt-4">
             <h2 className="text-center">Sign Up</h2>
-            {/* {error && <Alert variant="danger">{error}</Alert>} */}
+                {/* {currentUser && console.log(currentUser.email)} */}
+            {error && <Alert variant="danger">{error}</Alert>}
             <Form 
-            // onSubmit={handleSubmit}
+            onSubmit={handleSubmit}
             >
               <Form.Group id="email">
                 <h4>Email</h4>
@@ -38,7 +50,7 @@ const SignUpForm = () => {
                 <Form.Control className="inputField" type="password" ref={passwordConfirmRef} required />
               </Form.Group>
               <Button 
-            //   disabled={loading}
+              disabled={isLoading}
                className="w-100" type="submit">
                 Sign Up
               </Button>
@@ -51,7 +63,7 @@ const SignUpForm = () => {
               Log In
               {/* </Link> */}
         </div>
-      </div> );
+       </div> );
 }
  
 export default SignUpForm;
