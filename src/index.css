@@ -121,11 +121,13 @@ label:hover{
 
 /* SignUp Form styling */
 
-.signUpform{
+.signUpform, .loginForm{
   margin:12vh auto;
   width:600px;
   max-width:50vw;
-  min-height:100vh;
+  padding:20px;
+  /* min-height:100vh; */
+  box-shadow:1px 2px 4px black;
 }
 
 .inputField{
