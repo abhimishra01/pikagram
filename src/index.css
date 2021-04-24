@@ -29,7 +29,6 @@ body{
   text-align: center;
 }
 .title h2{
-  
   color: var(--primary);
   margin-top: 60px;
   font-size: 2.6rem;
@@ -96,8 +95,8 @@ label:hover{
   /* padding:50% 0; */
 }
 .img{
-  height:100%;
- width:100%;
+  height:100vh;
+ width:100vh;
  margin: 30px auto;
 }
 
@@ -134,4 +133,80 @@ label:hover{
 
 .inputField{
   text-align: center;
+}
+
+/* Title Upper Cont styling */
+.upperCont{
+  margin:0px;
+  display:flex;
+  flex-flow:row ;
+  justify-content: space-between;
+}
+
+.profile {
+  max-height:50px;
+  text-align: center;
+}
+.user, .title h1 {
+  margin:10px 0;
+}
+.logoutbtn{
+  background-color:var(--primary);
+  border: 1px solid #333;
+  border-radius:60px;
+  max-width:100px;
+  width:80px;
+  margin:2px auto;
+  box-shadow:1px 1px 2px black;
+}
+
+.logoutbtn Button{
+  font-size:14px;
+  color:white;
+}
+
+@media screen and (max-width:638px){
+  
+.logoutbtn Button{
+  font-size:12px;
+}
+
+.user{
+  max-height:30px;
+  font-size:10px;
+}
+
+.title h2,  .title h1{
+  font-size:15px;
+}
+.title p{
+  font-size:10px;
+}
+
+.img-grid{
+  margin:45px auto;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  text-align:center;
+}
+.image-wrap{
+  overflow:hidden;
+  opacity:0.9;
+  position:relative;
+}
+.img{
+  height:80vh;
+  width:80vw;
+ margin: 20px auto;
+}
+}
+
+@media screen and (max-width:360px){
+  
+.img{
+  height:60vh;
+  width:60vw;
+}
+ /* margin: 20px auto; */
 }
