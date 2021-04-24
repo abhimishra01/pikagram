@@ -1,6 +1,7 @@
 import React from 'react';
-import Emoji from 'a11y-react-emoji';
 import {fireStore} from "../firebaseConfig";
+import DeleteOutlinedIcon from '@material-ui/icons/DeleteOutlined';
+
 
 const DeleteBtn = ({id}) => {
     const databaseRef = fireStore.collection('images');
@@ -14,7 +15,7 @@ const DeleteBtn = ({id}) => {
             <button
             className="like-btn"
             onClick={likeHandleEvent}
-            > <Emoji symbol="❌" label="delete" /></button>
+            ><DeleteOutlinedIcon id="del" /></button>
        
      );
 }
