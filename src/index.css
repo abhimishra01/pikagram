@@ -181,6 +181,17 @@ label:hover{
 }
 
 
+/* Crud buttons stylings */
+
+.crudBtns{
+  margin-bottom: 50px;
+   display:flex;
+   flex-flow:row no-wrap;
+   justify-content: space-evenly;
+ }
+
+ 
+
 @media screen and (max-width:638px){
   
 .logoutbtn Button{
@@ -225,12 +236,4 @@ label:hover{
   width:60vw;
 }
  /* margin: 20px auto; */
-}
-
-
-.crudBtns{
- margin-bottom: 50px;
-  display:flex;
-  flex-flow:row no-wrap;
-  justify-content: space-evenly;
 }
