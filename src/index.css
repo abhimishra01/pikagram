@@ -176,7 +176,9 @@ label:hover{
 .user, .title h1 {
   margin:10px 0;
 }
-
+.pika-label{
+  color:var(--primary)
+}
 .user{
   font-family:cursive;
 }
