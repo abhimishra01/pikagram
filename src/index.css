@@ -134,7 +134,7 @@ label:hover{
 }
 /* SignUp Form styling */
 
-.signUpform, .loginForm{
+.signUpform, .loginForm,.forgotPaswd{
   margin:12vh auto;
   width:600px;
   max-width:50vw;
@@ -249,7 +249,33 @@ label:hover{
   width:80vw;
  margin: 20px auto;
 }
+
+.signUpform, .loginForm,.forgotPaswd{
+  margin:8vh auto;
+  width:600px;
+  max-width:60vw;
+  padding:20px;
+  /* min-height:100vh; */
+  box-shadow:1px 2px 4px black;
 }
+
+.signUpform h2, .loginForm h2,.forgotPaswd h2{
+  font-size:16px;
+}
+
+
+.signUpform h4, .loginForm h4,.forgotPaswd h5{
+  font-size:12px;
+}
+
+
+
+.signUpform Button, .loginForm Button,.forgotPaswd Button{
+  font-size:12px;
+}
+
+}
+
 
 @media screen and (max-width:360px){
   
@@ -257,5 +283,30 @@ label:hover{
   height:60vh;
   width:60vw;
 }
- /* margin: 20px auto; */
+
+.signUpform, .loginForm,.forgotPaswd{
+  margin:8vh auto;
+  width:600px;
+  max-width:60vw;
+  padding:20px;
+  /* min-height:100vh; */
+  box-shadow:1px 2px 4px black;
+}
+
+.signUpform h2, .loginForm h2,.forgotPaswd h2{
+  font-size:16px;
+}
+
+
+.signUpform h4, .loginForm h4,.forgotPaswd h5{
+  font-size:12px;
+}
+
+.signUpform Button, .loginForm Button,.forgotPaswd Button{
+  font-size:10px;
+}
+
+.signUpform Link, .loginForm Link,.forgotPaswd Link{
+  font-size:8px;
+}
 }
