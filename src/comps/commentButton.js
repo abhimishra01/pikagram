@@ -1,5 +1,5 @@
 import React from 'react';
-import Emoji from 'a11y-react-emoji';
+import { FaComments } from 'react-icons/fa';
 
 const CommentsBtn = ({setComments,comments,imgid,setSelectedCmtBtn,setimgId}) => {
    
@@ -13,7 +13,7 @@ const CommentsBtn = ({setComments,comments,imgid,setSelectedCmtBtn,setimgId}) =>
             <button
             onClick={updateStates}
             className="like-btn"
-            > <Emoji symbol="💭" label="comment" /></button>
+            > <FaComments/></button>
        
      );
 }
