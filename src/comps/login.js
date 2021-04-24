@@ -2,7 +2,7 @@ import React, {useState,useRef} from "react";
 import {Card, Form, Button, Alert } from 'react-bootstrap';
 import {useAuth} from '../context/AuthContext';
 import "bootstrap/dist/css/bootstrap.min.css";
-import {Link} from 'react-router-dom';
+import {Link,useHistory} from 'react-router-dom';
 
 const LoginForm = () => {
     
@@ -11,6 +11,7 @@ const LoginForm = () => {
     const [isLoading, setLoading] = useState(false);
     const {login, currentUser} = useAuth();
     const [error,setError] = useState(null);
+    const history = useHistory();
 
     async function handleSubmit(evt){
         evt.preventDefault();
@@ -18,9 +19,10 @@ const LoginForm = () => {
         try{
             setLoading(true);
             await login(emailRef.current.value, passwordRef.current.value);
+            history.push("/dashboard");  
         }
         catch{
-            setError("Failed to create an account!")
+            setError("Failed to Login, Please Enter Correct Credentials")
         }
         setLoading(false);
     }
