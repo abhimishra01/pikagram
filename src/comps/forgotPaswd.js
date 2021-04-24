@@ -38,7 +38,7 @@ const ForgotPaswd = () => {
             onSubmit={handleSubmit}
             >
               <Form.Group id="email">
-                <h5 className="text-center">Enter your Email address</h5>
+                <p className="text-center">Enter your Email address</p>
                 <Form.Control className="inputField" type="email" ref={emailRef} required />
               </Form.Group>
             

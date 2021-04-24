@@ -31,6 +31,7 @@ const LoginForm = () => {
         <Card className="SignUpCard">
           <Card.Body className="mt-4">
             <h2 className="text-center">Log In</h2>
+            <p class="text-center">To your <strong class="pika-label">Pikagram</strong> Account</p>
                 {/* {currentUser && console.log(currentUser.email)} */}
             {error && <Alert class="alert" variant="danger">{error}</Alert>}
             <Form 
