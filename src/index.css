@@ -213,6 +213,14 @@ label:hover{
   color:var(--primary)
 }
 
+#like{
+  color:#ff4a4a;
+  margin:2px;
+}
+
+#del{
+  color:darkgoldenrod;
+}
 
 @media screen and (max-width:638px){
   
