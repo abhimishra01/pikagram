@@ -1,12 +1,22 @@
-import React, {useState,useRef} from "react";
-import {Card, Form, Button } from 'react-bootstrap'
-import "bootstrap/dist/css/bootstrap.min.css"
+import React, {useRef} from "react";
+import {Card, Form, Button } from 'react-bootstrap';
+import {useAuth} from '../context/AuthContext';
+import "bootstrap/dist/css/bootstrap.min.css";
+
+
 const SignUpForm = () => {
     
     const emailRef = useRef(null);
     const passwordRef = useRef(null);
     const passwordConfirmRef = useRef(null);
+    const {signUp} = useAuth();
     
+
+    const handleSubmit =(evt)=>{
+        e.preventDefault();
+        signUp(emailRef.current.value, passwordRef.current.value);
+    }
+
     return ( <div className="signUpform">
         <Card className="SignUpCard">
           <Card.Body className="mt-4">
