@@ -33,7 +33,7 @@ const [error, setError] = useState(null);
         }
     }
     return (
-        <form>
+        <form class="uplodForm">
             <label>
             <input type="file"
             onChange={changeHandler}
