@@ -210,14 +210,17 @@ label:hover{
 /* Crud buttons stylings */
 
 .crudBtns{
-  margin-bottom: 50px;
+  margin-top:30px;
+  margin-bottom: 60px;
    display:flex;
    flex-flow:row no-wrap;
    justify-content: space-evenly;
  }
 
 .like-btn{
-  padding:12px;
+  height:60px;
+  width:65px;
+  /* padding:20px; */
   background-color:transparent;
   border:0px;
   box-shadow:1px 1px 3px var(--primary);
