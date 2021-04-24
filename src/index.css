@@ -134,11 +134,19 @@ label:hover{
 
 .backdrop form textarea{
   border:0px;
-  /* border:1px solid var(--primary); */
   padding:6px;
   height:18vh;
 }
-/* SignUp Form styling */
+
+.backdrop .cmnts-section{
+  background-color: #007bff8a;
+  padding:20px;
+  color:white;
+  max-width:500px;
+  width:400px;
+  margin:100px auto;
+  min-height:30vh;
+}
 
 .signUpform, .loginForm,.forgotPaswd{
   margin:12vh auto;
