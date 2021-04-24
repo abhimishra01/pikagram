@@ -1,9 +1,9 @@
 import React,{useState} from 'react';
-import Title from './comps/Title';
-import UploadForm from './comps/uploadForm';
-import ImageGrid from './comps/imageGrid'
-import Modal from './comps/modal';
-import CmtModal from './comps/commentsModal';
+import Title from './Title';
+import UploadForm from './uploadForm';
+import ImageGrid from './imageGrid'
+import Modal from './modal';
+import CmtModal from './commentsModal';
 
 const Dashboard = ()=> {
   const [selectedImg, setSelectedImg] = useState(null);
