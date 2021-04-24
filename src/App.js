@@ -4,7 +4,9 @@ import {AuthProvider} from './context/AuthContext';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Dashboard from "./comps/dashboard";
 import LoginDashboard from './comps/login';
+import ForgotPaswd from "./comps/forgotPaswd";
 import PrvRoute from "./comps/privateRoute";
+
 function App() {
   return (
     <div className="App">
@@ -16,6 +18,8 @@ function App() {
           <Route exact path="/signup">
           <SignUpForm/>
           </Route>
+          <Route exact path="/forgotpassword"
+          component={ForgotPaswd}/>
         </Switch>
       </AuthProvider>
      </Router>
