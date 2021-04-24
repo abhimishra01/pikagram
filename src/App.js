@@ -3,6 +3,7 @@ import SignUpForm from './comps/signUp';
 import {AuthProvider} from './context/AuthContext';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Dashboard from "./comps/dashboard";
+import LoginDashboard from './comps/login';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <AuthProvider>
         <Switch>
           <Route exact path="/" component={Dashboard}/>
+          <Route exact path="/login" component={LoginDashboard}/>
           <Route exact path="/signup">
           <SignUpForm/>
           </Route>
