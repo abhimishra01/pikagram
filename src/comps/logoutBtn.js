@@ -19,7 +19,7 @@ const LogoutBtn = () => {
     return ( 
         <div className="profile">
           <div className="user">
-          <strong>Email:</strong> {currentUser.email}
+          <strong>User:</strong> {currentUser.email}
           </div>
                <div className="text-center logoutbtn">
                <Button variant="link" onClick={handleLogout}>Logout</Button>
