@@ -38,7 +38,7 @@ const ForgotPaswd = () => {
             onSubmit={handleSubmit}
             >
               <Form.Group id="email">
-                <p className="text-center">Enter your Email address</p>
+                <p className="text-center">Enter your <strong class="pika-label">Email address</strong></p>
                 <Form.Control className="inputField" type="email" ref={emailRef} required />
               </Form.Group>
             
