@@ -2,7 +2,7 @@ import React, {useState,useRef} from "react";
 import {Card, Form, Button, Alert } from 'react-bootstrap';
 import {useAuth} from '../context/AuthContext';
 import "bootstrap/dist/css/bootstrap.min.css";
-import {Link,useHistory} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 const ForgotPaswd = () => {
     
@@ -11,7 +11,7 @@ const ForgotPaswd = () => {
     const {resetPassword} = useAuth();
     const [error,setError] = useState(null);
     const [message, setMessage] = useState("");
-    const history = useHistory();
+ 
 
     async function handleSubmit(evt){
         evt.preventDefault();
@@ -33,6 +33,7 @@ const ForgotPaswd = () => {
             <h2 className="text-center">Password Reset</h2>
                 {/* {currentUser && console.log(currentUser.email)} */}
             {error && <Alert variant="danger">{error}</Alert>}
+             {message && <Alert variant="success">{message}</Alert>}
             <Form 
             onSubmit={handleSubmit}
             >

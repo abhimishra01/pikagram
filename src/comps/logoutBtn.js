@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Button} from "react-bootstrap";
+import {Button,Alert} from "react-bootstrap";
 import {useAuth} from '../context/AuthContext';
 import {useHistory}  from 'react-router-dom';
 const LogoutBtn = () => {
@@ -23,6 +23,8 @@ const LogoutBtn = () => {
           </div>
                <div className="text-center logoutbtn">
                <Button variant="link" onClick={handleLogout}>Logout</Button>
+               {error && <Alert variant="danger">{error}</Alert>}
+         
            </div>
          </div>
      );

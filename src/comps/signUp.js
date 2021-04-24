@@ -10,7 +10,7 @@ const SignUpForm = () => {
     const passwordRef = useRef(null);
     const [isLoading, setLoading] = useState(false);
     const passwordConfirmRef = useRef(null);
-    const {signup, currentUser} = useAuth();
+    const {signup} = useAuth();
     const [error,setError] = useState(null);
     const history = useHistory();
 

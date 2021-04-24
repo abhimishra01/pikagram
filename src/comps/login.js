@@ -9,7 +9,7 @@ const LoginForm = () => {
     const emailRef = useRef(null);
     const passwordRef = useRef(null);
     const [isLoading, setLoading] = useState(false);
-    const {login, currentUser} = useAuth();
+    const {login} = useAuth();
     const [error,setError] = useState(null);
     const history = useHistory();
 
