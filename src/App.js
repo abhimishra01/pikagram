@@ -4,14 +4,14 @@ import {AuthProvider} from './context/AuthContext';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Dashboard from "./comps/dashboard";
 import LoginDashboard from './comps/login';
-
+import PrvRoute from "./comps/privateRoute";
 function App() {
   return (
     <div className="App">
      <Router>
       <AuthProvider>
         <Switch>
-          <Route exact path="/dashboard" component={Dashboard}/>
+          <PrvRoute exact path="/dashboard" component={Dashboard}/>
           <Route exact path="/login" component={LoginDashboard}/>
           <Route exact path="/signup">
           <SignUpForm/>
