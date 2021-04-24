@@ -29,6 +29,8 @@ body{
   text-align: center;
 }
 .title h2{
+  
+  color: var(--primary);
   margin-top: 60px;
   font-size: 2.6rem;
   
@@ -38,7 +40,7 @@ p{
 }
 
 /* upload form styles */
-form{
+.uplodForm{
   margin: 30px auto 10px;
   text-align: center;
 }
@@ -49,8 +51,8 @@ label input{
 }
 label{
   display: block;
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 45px;
   border: 1px solid var(--primary);
   border-radius: 50%;
   margin: 10px auto;
