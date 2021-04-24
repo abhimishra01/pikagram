@@ -2,7 +2,7 @@ import React from 'react';
 import SignUpForm from './comps/signUp';
 import {AuthProvider} from './context/AuthContext';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
-
+import Dashboard from "./comps/dashboard";
 
 function App() {
   return (
@@ -10,7 +10,8 @@ function App() {
      <Router>
       <AuthProvider>
         <Switch>
-          <Route path="/signup">
+          <Route exact path="/" component={Dashboard}/>
+          <Route exact path="/signup">
           <SignUpForm/>
           </Route>
         </Switch>
