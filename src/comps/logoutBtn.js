@@ -8,12 +8,12 @@ const LogoutBtn = () => {
     const {currentUser,logout} = useAuth();
     const [error, seterror] = useState("");
 
-    async function handleLogout(evt){
+    async function handleLogout(){
         try{
             await logout();
             history.push("/login");
         }catch{
-            setError("Failed to logout !")
+            seterror("Failed to logout !")
         }
     }
     return ( 
