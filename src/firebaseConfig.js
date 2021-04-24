@@ -27,9 +27,9 @@ const timestamp = firebase.firestore.FieldValue.serverTimestamp;
 
 
 // firebase auth init
-const firebaseAuth = firebase.auth();
+const auth = firebase.auth();
 
 // exporting the above to use in diff react components
-export {projectStorage, fireStore, timestamp, firebaseAuth}
+export {projectStorage, fireStore, timestamp, auth}
 
 // after this we need to initialize / configure the two services on our firebase dashboard ..
