@@ -34,6 +34,12 @@ body{
   font-size: 2.6rem;
   
 }
+
+.alert{
+  background-color:
+  #fecf6d;
+  font-weight: bold;
+}
 p{
   font-family:cursive;
 }
@@ -282,11 +288,18 @@ label:hover{
   font-size:12px;
 }
 
+.alert{
+  font-size:12px;
+}
+
 }
 
 
 @media screen and (max-width:360px){
   
+.alert{
+  font-size:8px;
+}
 .img{
   height:60vh;
   width:60vw;

@@ -32,7 +32,7 @@ const LoginForm = () => {
           <Card.Body className="mt-4">
             <h2 className="text-center">Log In</h2>
                 {/* {currentUser && console.log(currentUser.email)} */}
-            {error && <Alert variant="danger">{error}</Alert>}
+            {error && <Alert class="alert" variant="danger">{error}</Alert>}
             <Form 
             onSubmit={handleSubmit}
             >
