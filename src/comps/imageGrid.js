@@ -31,7 +31,7 @@ const ImageGrid = ({setComments,setSelectedImg,setSelectedCmtBtn,setimgId}) =>{
                    transitio={{delay:1}}
                    />
                </motion.div>
-           <div className="btns">
+           <div className="crudBtns">
                  <LikeButton
                  id={docs.id}
                  likes={docs.likes}
