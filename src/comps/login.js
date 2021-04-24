@@ -19,7 +19,7 @@ const LoginForm = () => {
         try{
             setLoading(true);
             await login(emailRef.current.value, passwordRef.current.value);
-            history.push("/dashboard");  
+            history.push("/");  
         }
         catch{
             setError("Failed to Login, Please Enter Correct Credentials")
