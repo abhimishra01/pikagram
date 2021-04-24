@@ -1,5 +1,5 @@
 # Pikagram is a Photo Gallery Application 
-#### This WebApp is hosted online where a user can upload / store images / pictures and view later on on the gallery of the WebApp
+#### Pikagram is a PhotoGallery Application that has features such as Upload, Like, Comment, Delete and Authentication. Similar to any other social media application. Soon this app will turn into a good Social Media WebApp
 - Built using React JS 
 - Backed with Firestore
 
