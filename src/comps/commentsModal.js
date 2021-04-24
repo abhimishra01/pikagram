@@ -39,10 +39,10 @@ const CmtModal = ({comments,imgId,setSelectedCmtBtn}) =>{
        </motion.form>
          <motion.div className="cmnts-section">
                  <ul>
-                 {comments.map(comment =>{
+                 {comments.map((comment,id) =>{
                     return (
                          <li
-                         id={imgId} 
+                         key={id} 
                          className="comments">
                              {comment}
                          </li>
