@@ -1,9 +1,15 @@
 import React from 'react';
 import {fireStore} from "../firebaseConfig";
 import FavoriteOutlinedIcon from '@material-ui/icons/FavoriteOutlined';
+import {useAuth} from '../context/AuthContext';
+
+
 
 const LikeButton = ({id,likes}) => {
-    const databaseRef = fireStore.collection('images');
+
+    const {currentUser} = useAuth();
+
+    const databaseRef = fireStore.collection(currentUser.email);
     const likeHandleEvent = ()=>{
         databaseRef.doc(id).update({
             likes: likes+1

@@ -3,9 +3,13 @@ import {motion} from 'framer-motion';
 import {fireStore} from "../firebaseConfig";
 import  firebase from 'firebase/app'; 
 import {useState} from 'react';
+import {useAuth} from '../context/AuthContext';
 
 const CmtModal = ({comments,imgId,setSelectedCmtBtn}) =>{
-    const databaseRef = fireStore.collection('images');
+
+    const {currentUser} = useAuth();
+
+    const databaseRef = fireStore.collection(currentUser.email);
     const [comment, setComment] = useState(null);
     const closeBackdrop = (evt)=>{
         if(evt.target.classList.contains('backdrop')){

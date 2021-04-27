@@ -1,10 +1,14 @@
 import React from 'react';
 import {fireStore} from "../firebaseConfig";
 import DeleteOutlinedIcon from '@material-ui/icons/DeleteOutlined';
+import {useAuth} from '../context/AuthContext';
 
 
 const DeleteBtn = ({id}) => {
-    const databaseRef = fireStore.collection('images');
+
+    const {currentUser} = useAuth();
+
+    const databaseRef = fireStore.collection(currentUser.email);
     const likeHandleEvent = ()=>{
         databaseRef.doc(id).delete()
         .then(()=>{

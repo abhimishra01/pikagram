@@ -1,6 +1,7 @@
 // React Hooks :- a way to create small reusable components in order to use them wherever needed
 import { useState, useEffect } from 'react';
 import { projectStorage, fireStore, timestamp } from "../firebaseConfig";
+import {useAuth} from '../context/AuthContext';
 const useStorage = (file)=> {
      // file param comes from our file state component
 
@@ -14,6 +15,7 @@ const useStorage = (file)=> {
     // image url after its uploaded and use URL to show in our page
     const [url, setURL] = useState(null);
 
+    const {currentUser} = useAuth();
 
     /**
      * We will be using "projectStorage" sdk to upload the file incoming from user to storage.
@@ -36,7 +38,7 @@ const useStorage = (file)=> {
         const storageRef = projectStorage.ref(file.name); // create a reference to the file inside default firebase storage
         
         // creating a refernce for interacting with firestore database
-        const databaseRef = fireStore.collection('images');
+        const databaseRef = fireStore.collection(currentUser.email);
 
         // putting the file using that reference
         /**

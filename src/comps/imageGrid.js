@@ -4,6 +4,7 @@ import LikeButton from './likeBtn';
 import DeleteBtn from './deleteButton';
 import {motion} from 'framer-motion';
 import CommentsBtn from './commentButton';
+import {useAuth} from '../context/AuthContext';
 
 const ImageGrid = ({setComments,setSelectedImg,setSelectedCmtBtn,setimgId}) =>{
     
@@ -11,7 +12,9 @@ const ImageGrid = ({setComments,setSelectedImg,setSelectedCmtBtn,setimgId}) =>{
     // const handleLikeEvt = (id) =>{
     
     //      }
-        const { doc } = useFirestore('images');
+    const {currentUser} = useAuth();
+        // console.log(currentUser.email);
+        const { doc } = useFirestore(currentUser.email);
         // console.log(doc);
         return (
             <div className='img-grid'>
