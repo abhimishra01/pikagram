@@ -70,7 +70,7 @@ const useStorage = (file)=> {
         }
         ) 
         
-    }, [file]);
+    }, [currentUser.email,file]);
 
     return {progress, url, error};
 
