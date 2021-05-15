@@ -2,59 +2,73 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
 
-:root{
+:root {
   --primary: #007BFF;
   --secondary: #4e4e4e;
   --error: #ff4a4a;
 }
 
 /* base styles & title */
-body{
+body {
   font-family: "Noto Serif";
   color: var(--secondary);
 }
-.App{
+
+.App {
   max-width: 960px;
   margin: 0 auto;
 }
-.title h1{
+
+
+.title {
+  /* width:100vw; */
+  /* background-color:green; */
+}
+
+.title h1 {
   color: var(--primary);
   font-size: 1.4rem;
   letter-spacing: 6px;
-  font-weight: normal;  
+  font-weight: normal;
   font-family: 'Dancing Script', cursive;
 
 }
-.title h2, .title p{
+
+.title h2,
+.title p {
   text-align: center;
 }
-.title h2{
+
+.title h2 {
   color: var(--primary);
   margin-top: 60px;
   font-size: 2.6rem;
-  
+
 }
 
-.alert{
+.alert {
   background-color:
-  #fecf6d;
+    #fecf6d;
   font-weight: bold;
 }
-p{
-  font-family:cursive;
+
+p {
+  font-family: cursive;
 }
 
 /* upload form styles */
-.uplodForm{
+.uplodForm {
   margin: 30px auto 10px;
   text-align: center;
 }
-label input{
+
+label input {
   height: 0;
   width: 0;
   opacity: 0;
 }
-label{
+
+label {
   display: block;
   width: 40px;
   height: 45px;
@@ -66,281 +80,313 @@ label{
   font-weight: bold;
   font-size: 24px;
 }
-label:hover{
+
+label:hover {
   background: var(--primary);
   color: white;
 }
-.output{
+
+.output {
   height: 10px;
   font-size: 0.8rem;
 }
-.error{
+
+.error {
   color: var(--error);
 }
 
 /* progress bar styles */
-.progress-bar{
+.progress-bar {
   height: 5px;
   background: var(--primary);
-  margin:20px;
+  margin: 20px;
 }
 
 /* image grid styles */
-.img-grid{
-  margin:65px auto;
-  display:flex;
-  flex-direction: column;
+.img-grid {
+  margin: 65px auto;
+  display: flex;
+  /* flex-direction: column; */
   align-items: center;
-  text-align:center;
+  justify-content: center;
+  text-align: center;
 }
-.image-wrap{
-  overflow:hidden;
+
+.image-wrap {
+  overflow: hidden;
   /* height:0; */
-  opacity:0.9;
-  position:relative;
+  opacity: 0.9;
+  position: relative;
   /* padding:50% 0; */
 }
-.img{
-  height:80vh;
- width:100vh;
- margin: 20px auto;
+
+.img {
+  height: 50vh;
+  width: 35vw;
+  margin: 20px auto;
 }
 
 /* modal styles */
-.backdrop{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background:rgba(51, 51, 51, 0.383);
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(51, 51, 51, 0.383);
 }
 
-.backdrop img{
-  display:block;
-  max-width:60%;
-  max-height:80%;
-  margin:60px auto;
+.backdrop img {
+  display: block;
+  max-width: 60%;
+  max-height: 80%;
+  margin: 60px auto;
   box-shadow: 3px 5px 7px rgba(37, 36, 36, 0.5);
   border: 3px solid black;
 }
 
-.backdrop form{
-  max-width:500px;
-  width:400px;
-  margin:100px auto;
+.backdrop form {
+  max-width: 500px;
+  width: 400px;
+  margin: 100px auto;
 }
 
 
-.backdrop form textarea{
-  border:0px;
-  padding:6px;
-  height:18vh;
+.backdrop form textarea {
+  border: 0px;
+  padding: 6px;
+  height: 18vh;
 }
 
-.backdrop .cmnts-section{
+.backdrop .cmnts-section {
   background-color: #007bff8a;
-  padding:20px;
-  color:white;
-  max-width:500px;
-  width:400px;
-  margin:100px auto;
-  min-height:30vh;
+  padding: 20px;
+  color: white;
+  max-width: 500px;
+  width: 400px;
+  margin: 100px auto;
+  min-height: 30vh;
 }
 
-.signUpform, .loginForm,.forgotPaswd{
-  margin:12vh auto;
-  width:600px;
-  max-width:50vw;
-  padding:20px;
+.signUpform,
+.loginForm,
+.forgotPaswd {
+  margin: 12vh auto;
+  width: 600px;
+  max-width: 50vw;
+  padding: 20px;
   /* min-height:100vh; */
-  box-shadow:1px 2px 4px black;
+  box-shadow: 1px 2px 4px black;
 }
 
-.inputField{
+.inputField {
   text-align: center;
 }
 
 /* Title Upper Cont styling */
-.upperCont{
-  margin:0px;
-  display:flex;
-  flex-flow:row ;
+.upperCont {
+  margin: 0px;
+  display: flex;
+  flex-flow: row;
   justify-content: space-between;
 }
 
 .profile {
-  max-height:50px;
+  max-height: 50px;
   text-align: center;
 }
-.user, .title h1 {
-  margin:10px 0;
-}
-.pika-label{
-  color:var(--primary)
-}
-.user{
-  font-family:cursive;
+
+.user,
+.title h1 {
+  margin: 10px 0;
 }
 
-.user strong{
-  font-family: "Noto Serif";
-  color:var(--primary);
+.pika-label {
+  color: var(--primary)
 }
-.logoutbtn{
-  background-color:var(--primary);
+
+.user {
+  font-family: cursive;
+}
+
+.user strong {
+  font-family: "Noto Serif";
+  color: var(--primary);
+}
+
+.logoutbtn {
+  background-color: var(--primary);
   border: 1px solid #333;
-  border-radius:60px;
-  max-width:100px;
-  width:80px;
-  margin:2px auto;
-  box-shadow:1px 1px 2px black;
+  border-radius: 60px;
+  max-width: 100px;
+  width: 80px;
+  margin: 2px auto;
+  box-shadow: 1px 1px 2px black;
 }
 
-.logoutbtn Button{
-  font-size:14px;
+.logoutbtn Button {
+  font-size: 14px;
   font-family: "Noto Serif";
-  color:white;
+  color: white;
 }
 
 
-.logoutbtn Button:hover{
-  color:white;
+.logoutbtn Button:hover {
+  color: white;
 }
 
 
 /* Crud buttons stylings */
 
-.crudBtns{
-  margin-top:30px;
+.crudBtns {
+  margin-top: 30px;
   margin-bottom: 60px;
-   display:flex;
-   flex-flow:row no-wrap;
-   justify-content: space-evenly;
- }
+  display: flex;
+  flex-flow: row no-wrap;
+  justify-content: space-evenly;
+}
 
-.like-btn{
-  height:60px;
-  width:65px;
+.like-btn {
+  height: 60px;
+  width: 65px;
   /* padding:20px; */
-  background-color:transparent;
-  border:0px;
-  box-shadow:1px 1px 3px var(--primary);
+  background-color: transparent;
+  border: 0px;
+  box-shadow: 1px 1px 3px var(--primary);
 }
 
-#cmt{
-  color:var(--primary)
+#cmt {
+  color: var(--primary)
 }
 
-#like{
-  color:#ff4a4a;
-  margin:2px;
+#like {
+  color: #ff4a4a;
+  margin: 2px;
 }
 
-#del{
-  color:darkgoldenrod;
+#del {
+  color: darkgoldenrod;
 }
 
-@media screen and (max-width:638px){
-  
-.logoutbtn Button{
-  font-size:12px;
-}
+@media screen and (max-width:638px) {
 
-.user{
-  max-height:30px;
-  font-size:10px;
-}
+  .logoutbtn Button {
+    font-size: 12px;
+  }
 
-.title h2,  .title h1{
-  font-size:15px;
-}
-.title p{
-  font-size:10px;
-}
+  .user {
+    max-height: 30px;
+    font-size: 10px;
+  }
 
-.img-grid{
-  margin:45px auto;
-  display:flex;
-  flex-direction: column;
-  align-items: center;
-  text-align:center;
-}
-.image-wrap{
-  overflow:hidden;
-  opacity:0.9;
-  position:relative;
-}
-.img{
-  height:80vh;
-  width:80vw;
- margin: 20px auto;
-}
+  .title h2,
+  .title h1 {
+    font-size: 15px;
+  }
 
-.signUpform, .loginForm,.forgotPaswd{
-  margin:8vh auto;
-  width:700px;
-  max-width:80vw;
-  padding:20px;
-  /* min-height:100vh; */
-  box-shadow:1px 2px 4px black;
-}
+  .title p {
+    font-size: 10px;
+  }
 
-.signUpform h2, .loginForm h2,.forgotPaswd h2{
-  font-size:16px;
-}
+  .img-grid {
+    margin: 45px auto;
+  }
 
+  .image-wrap {
+    overflow: hidden;
+    opacity: 0.9;
+    position: relative;
+  }
 
-.signUpform h4, .loginForm h4,.forgotPaswd h5{
-  font-size:12px;
-}
+  .img {
+    height: 70vh;
+    width: 35vw;
+    margin: 20px auto;
+  }
 
+  .signUpform,
+  .loginForm,
+  .forgotPaswd {
+    margin: 8vh auto;
+    width: 700px;
+    max-width: 80vw;
+    padding: 20px;
+    /* min-height:100vh; */
+    box-shadow: 1px 2px 4px black;
+  }
+
+  .signUpform h2,
+  .loginForm h2,
+  .forgotPaswd h2 {
+    font-size: 16px;
+  }
 
 
-.signUpform Button, .loginForm Button,.forgotPaswd Button{
-  font-size:12px;
-}
-
-.alert{
-  font-size:12px;
-}
-
-}
+  .signUpform h4,
+  .loginForm h4,
+  .forgotPaswd h5 {
+    font-size: 12px;
+  }
 
 
-@media screen and (max-width:360px){
-  
-.alert{
-  font-size:8px;
-}
-.img{
-  height:60vh;
-  width:60vw;
-}
 
-.signUpform, .loginForm,.forgotPaswd{
-  margin:8vh auto;
-  width:700px;
-  max-width:80vw;
-  padding:20px;
-  /* min-height:100vh; */
-  box-shadow:1px 2px 4px black;
-}
+  .signUpform Button,
+  .loginForm Button,
+  .forgotPaswd Button {
+    font-size: 12px;
+  }
 
-.signUpform h2, .loginForm h2,.forgotPaswd h2{
-  font-size:16px;
+  .alert {
+    font-size: 12px;
+  }
+
 }
 
 
-.signUpform h4, .loginForm h4,.forgotPaswd h5{
-  font-size:12px;
-}
+@media screen and (max-width:490px) {
 
-.signUpform Button, .loginForm Button,.forgotPaswd Button{
-  font-size:10px;
-}
+  .alert {
+    font-size: 8px;
+  }
 
-.signUpform Link, .loginForm Link,.forgotPaswd Link{
-  font-size:8px;
-}
+  .img {
+    height: 50vh;
+    width: 45vw;
+  }
+
+  .signUpform,
+  .loginForm,
+  .forgotPaswd {
+    margin: 8vh auto;
+    width: 700px;
+    max-width: 80vw;
+    padding: 20px;
+    /* min-height:100vh; */
+    box-shadow: 1px 2px 4px black;
+  }
+
+  .signUpform h2,
+  .loginForm h2,
+  .forgotPaswd h2 {
+    font-size: 16px;
+  }
+
+
+  .signUpform h4,
+  .loginForm h4,
+  .forgotPaswd h5 {
+    font-size: 12px;
+  }
+
+  .signUpform Button,
+  .loginForm Button,
+  .forgotPaswd Button {
+    font-size: 10px;
+  }
+
+  .signUpform Link,
+  .loginForm Link,
+  .forgotPaswd Link {
+    font-size: 8px;
+  }
 }
