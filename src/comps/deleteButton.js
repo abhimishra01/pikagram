@@ -5,23 +5,24 @@ import {useAuth} from '../context/AuthContext';
 
 
 const DeleteBtn = ({id}) => {
-
     const {currentUser} = useAuth();
-
     const databaseRef = fireStore.collection(currentUser.email);
-    const likeHandleEvent = ()=>{
+    const deleteHandleEvent = ()=>{
+        let userConfirmation = window.confirm("Do you really want to delete this image from your gallery?");
+        if(userConfirmation){   
         databaseRef.doc(id).delete()
-        .then(()=>{
-            console.log("Deleted Successfully");
-        })
+            .then(()=>{
+                alert("Deleted Successfully");
+            })
+        }
     }
-    return ( 
+        return ( 
             <button
             className="like-btn"
-            onClick={likeHandleEvent}
+            onClick={deleteHandleEvent}
             ><DeleteOutlinedIcon id="del" /></button>
-       
-     );
+            
+            );
 }
  
 export default DeleteBtn;
