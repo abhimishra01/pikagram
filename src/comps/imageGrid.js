@@ -3,7 +3,6 @@ import useFirestore from '../hooks/useFirestore';
 import LikeButton from './likeBtn';
 import DeleteBtn from './deleteButton';
 import {motion} from 'framer-motion';
-import CommentsBtn from './commentButton';
 import {useAuth} from '../context/AuthContext';
 
 const ImageGrid = ({setComments,setSelectedImg,setSelectedCmtBtn,setimgId}) =>{
