@@ -20,11 +20,6 @@ body {
 }
 
 
-.title {
-  /* width:100vw; */
-  /* background-color:green; */
-}
-
 .title h1 {
   color: var(--primary);
   font-size: 1.4rem;
@@ -104,12 +99,14 @@ label:hover {
 
 /* image grid styles */
 .img-grid {
-  margin: 65px auto;
-  display: flex;
+  width: 100%;
+  /* margin: 65px; */
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
   /* flex-direction: column; */
-  align-items: center;
+  /* align-items: center;
   justify-content: center;
-  text-align: center;
+  text-align: center; */
 }
 
 .image-wrap {
@@ -121,9 +118,10 @@ label:hover {
 }
 
 .img {
-  height: 50vh;
-  width: 35vw;
-  margin: 20px auto;
+  object-fit: cover;
+  height: 35vh;
+  width: 30vw;
+  margin: 1rem auto;
 }
 
 /* modal styles */
@@ -239,8 +237,8 @@ label:hover {
 /* Crud buttons stylings */
 
 .crudBtns {
-  margin-top: 30px;
-  margin-bottom: 60px;
+  margin-top: 1rem;
+  margin-bottom: 1.3rem;
   display: flex;
   flex-flow: row no-wrap;
   justify-content: space-evenly;
@@ -268,7 +266,8 @@ label:hover {
   color: darkgoldenrod;
 }
 
-@media screen and (max-width:638px) {
+@media screen and (max-width:640px) {
+
 
   .logoutbtn Button {
     font-size: 12px;
@@ -278,14 +277,19 @@ label:hover {
     max-height: 30px;
     font-size: 10px;
   }
+.like-btn {
+  height: 45px;
+  width: 55px;
+  padding:8px;
+}
 
   .title h2,
   .title h1 {
-    font-size: 15px;
+    font-size: 1.4rem;
   }
 
   .title p {
-    font-size: 10px;
+    font-size: 0.72rem;
   }
 
   .img-grid {
@@ -344,14 +348,31 @@ label:hover {
 
 
 @media screen and (max-width:490px) {
-
+.like-btn {
+  height: 40px;
+  width: 50px;
+  padding: 6px;
+}
   .alert {
     font-size: 8px;
   }
 
+  .title{
+    width:100vw;
+  }
+  .title h2,
+  .title h1 {
+    font-size: 1.2rem;
+  }
+
+  .title p {
+    font-size: 0.55rem;
+  }
+
   .img {
-    height: 50vh;
-    width: 45vw;
+    height: 30vh;
+    width: 30vw;
+    margin:20px;
   }
 
   .signUpform,

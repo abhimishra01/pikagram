@@ -19,7 +19,7 @@ const LikeButton = ({id,likes}) => {
             <button
             className="like-btn"
             onClick={likeHandleEvent}
-            > <FavoriteOutlinedIcon id="like"/>
+            > <FavoriteOutlinedIcon fontSize="small" id="like"/>
            {likes}</button>
        
      );

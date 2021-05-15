@@ -39,13 +39,13 @@ const ImageGrid = ({setComments,setSelectedImg,setSelectedCmtBtn,setimgId}) =>{
                  id={docs.id}
                  likes={docs.likes}
                  />
-                 <CommentsBtn
+                 {/* <CommentsBtn
                  setComments={setComments}
                  comments={docs.comments}
                  imgid={docs.id}
                  setSelectedCmtBtn={setSelectedCmtBtn}
                  setimgId={setimgId}
-                 />
+                 /> */}
                  <DeleteBtn
                  id={docs.id}
                  />
