@@ -266,6 +266,12 @@ label:hover {
   color: darkgoldenrod;
 }
 
+
+@media screen and (max-width: 999px){
+  
+}
+
+
 @media screen and (max-width:640px) {
 
 
@@ -369,10 +375,14 @@ label:hover {
     font-size: 0.55rem;
   }
 
+  .img-grid{
+    grid-template-columns: repeat(1,1fr);
+  }
   .img {
     height: 30vh;
-    width: 30vw;
+    width: 80vw;
     margin:20px;
+    /* object-fit: contain; */
   }
 
   .signUpform,
