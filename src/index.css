@@ -100,6 +100,7 @@ label:hover {
 /* image grid styles */
 .img-grid {
   width: 100%;
+  margin-top:40px;
   /* margin: 65px; */
   display: grid;
   grid-template-columns: repeat(2,1fr);
@@ -140,7 +141,7 @@ label:hover {
   max-height: 80%;
   margin: 60px auto;
   box-shadow: 3px 5px 7px rgba(37, 36, 36, 0.5);
-  border: 3px solid black;
+  border: 5px solid var(--primary);
 }
 
 .backdrop form {
