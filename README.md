@@ -1,12 +1,14 @@
-# Pikagram is a Photo Gallery Application 
-#### Pikagram is a PhotoGallery Application that has features such as Upload, Like, Comment, Delete and Authentication. Similar to any other Photo Gallery Keep application. 
+# Pikagram is a Photo Gallery Applicatio
 - Built using React JS 
-- Backed with Firestore
+- Backed with Firesbase
 
-
-
-
-### In the project directory, you can run:
-
-### `npm start`
-
+## Features :
+- Add new pictures
+- Like & Delete
+- User authentication
+  
+## Tech Stack Used :
+-   React js
+-   Firebase Auth
+-   Firebase Storage 
+-   Firebase Firestore 
